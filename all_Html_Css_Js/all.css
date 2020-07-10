@@ -135,4 +135,23 @@ p {
     overflow-y: hidden;
     overflow: initial; /* scrolling methods for elements that overflow */
 }
-/* it is working */
+/* marquee properties deprecated aviod using them.
+
+Rotating boxes ; (rotation; rotation-point) are deprecated; use rotate instead
+
+//Template layout model ( explore the grid layout too )
+letter represents the slot; @ shows the default slot; (.) white spaces;
+*/
+body {
+    height: 100%;
+    display: "a . b . c" /2em   /* (keyword; string(.;@; ); row-height; col-width) ; (*) represents all rows/cols of eq width/height.*/
+    ". . ." /1em
+    "d . e . f" /2em
+    ". . ." /1em
+    "g . h . i" /2em
+    5em 1em * 1em 10em
+}
+#logo {position: a;}    /* position describes its block; */
+#motto {position: b;}
+
+/* Multi-column method */
