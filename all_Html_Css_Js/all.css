@@ -1,0 +1,137 @@
+/* Reference to styling in CSS */
+
+/*#########################################
+####### ch-18 CSS #########################
+###########################################*/
+
+/* CSS Selectors */
+* { margin: auto;} /* Universal Selector */
+h1, h2, p {font-family: cursive;} /* Type Selector */
+.intro, h1.intro { font: outline;} /* class selector; from <h1 class="intro">;*/
+#myId { font-size: larger;} /* id selector; from <h1 id="myId">;*/
+TD>b { font: outline;} /* child selector; selects the immediate child;*/
+h2+p { font-weight: 100;} /* adjacent sibling selector;*/
+
+/* attribute selector */
+[lang|=fr] {background-color: red;} /* match if ele has att. with value;*/
+a[title] { color: red;} /* match if ele has that att.*/
+a[href="img.jpg"] { font-weight: bold;} /* if ele has that att. with that value */
+a[title~=Web] { background-color: red;} /* if ele has att. with space seperated items that match value;*/
+/* querySelector() and querySelectorAll() methods search and example;*/
+
+/* Inserting CSS in HTML;
+// for internal style sheet you can include it in HEAD ele to avilable in document;
+<style type="text/css">
+    selector { property: value;}
+</style>
+
+// for external style sheet 
+    //using linkning
+    <link rel="style sheet" type="text/css" href="test.css"/>
+
+    //or importing
+    <style type="text/css">
+        @import url("mysheet.css")
+        h1 { color: blue;}  //to add more element other than mysheet.css 
+    </style>
+*/
+
+/* ########################################
+####### ch-19 Backgrounds and #############
+####### Color Gradients in CSS ############
+###########################################*/
+
+p {
+    background-color: aqua; /* (color name; Hexadecimal eq value; RGB value; tansparent; inherit) */
+    background-image: url("image.jpg"); /* (none) */
+    background-repeat: no-repeat; /* (repeat-x; repeat-y; repeat; inherit) */
+    background-attachment: fixed; /* (scroll) */
+    background-position: 0em; /* used with image property (left; 100px; 50%) */
+    background-clip: border-box; /* (padding-box) ; whether background image extends or not*/
+    background-origin: border-box; /* (padding-box; content-box) ; starting postition in a box like shape*/
+    background-size: auto; /* (auto; 15px; 50%) ; no negative; size of image i.e ussed for an element. */
+    /* background-qantity: infinite;  !work ; (int like 5; infinite) ; no negative; repetition of img*/
+    /*background-spacing: 5px 6px;  !work; ( value ) ; specify the distance b/w repeated img in bg */
+    background: orange url("metal.jpg") 100% auto; /* (bg-color; bg-img; bg-repeat; bg-attachment; positon; size)*/
+    opacity: 0.5; 
+    background: linear-gradient(top, #35425d 0%, #fff 100%); /* (pos of first color; #AAA prime color; B- % from fade begins; #xxx second color; Y- % from fade begins) */
+
+}
+
+/*#########################################
+####### ch-20 Fonts and Text Styles ######
+##########################################*/
+
+body {
+    font-family: sans-serif; /*(serif, cursive, fantasy, mono-space) ; more than one can be spcified,
+    if one font unavailable then the other will be taken;*/
+    font-size: 10px;
+    font-size: small; /* using absolute values (xx-small, x-small, meduim, large, x-large, xx-large);*/
+    font-size: larger; /* using relative value with respecte to parent element; (smaller) */
+    font-size: 20%; /* using percentage values with respect to parent element;*/
+
+    font-size-adjust: 0.5; /* ration of font height of lowercase letter to the actual height of the font;*/
+    font-stretch: condensed; /* wide range of options */
+    font-style: italic; /* (normal; italic; oblique)*/
+    font-variant: small-caps; /* (initial; inherit; unset) */
+    font-weight: 100; /* (100-900; bold; lighter ..etc) */
+    font: bold italic 30px verdana; /* see for the order */
+    @font-face {
+        font-family: new.ttf;
+        src: url(new.ttf); /* to define our own exeternal font*/
+    }
+    /* a wide range of text-properties; */
+    text-transform: capitalize; /* (lowercase; uppercase; none;) */
+    text-indent: 0%;
+    text-shadow: #ff0000 12px -12px 2px;
+    text-overflow: clip; /* range of options*/
+}
+
+/*#############################################
+### ch-21 Creating Boxes and Columns in CSS ###
+###############################################*/
+
+/* Box Model ; from out to in ; ( margin area, border, padding, content);
+
+// Padding properties;  */
+#container { padding: 0%;} /* (padding-top,left,right,bottom) used with (length; %; auto) */
+/* Border properties    */
+p {
+    border-width: thin;
+    border-top-width: thick;
+    border-color: transparent;
+    border-top-color: inherit;
+    border-style: groove; /* (none; hidden; dotted; dashed; solid; double; ridge; inset; outset)*/
+    border: thick double greenyellow;
+    border-radius: 5px 10px 5px 10px / 10px 5px 10px 5px; /* to draw rounded corners */
+    border-radius: 5px;
+    border-radius: 5px 10px / 10px;
+
+    border-image: url("my.jpg") 27 round stretch;
+    border-image-source: url("my.jpg");
+    border-image-slice: fill;
+    border-image-width: 27;
+    border-image-outset: 34; /* value of the border image that can be extended beyond the border box; (length; number)*/
+    border-image-repeat: repeat; /* image for the sides, middle of border are scaled and tiled; (stretch; repeat; round) */
+    box-shadow: 20px 20px 20px #888; /* (none; length length length color); len1-horizontal-offset len2-vertical-offset len3-blur-radius */
+}
+
+/* Margin properties */
+p {
+    margin: auto; /* (auto; len; %; inherit) */
+}
+p {
+    width: 100px;
+    height: 200px; /* sets the width and height of the box. ; (len; %; auto) */
+    min-width: 10%;
+    max-width: 20%;
+    min-height: 10%;
+    max-height: 10%; /* no negative one to all properties; */
+}
+img { float: left;}
+/* overflowing of box content */
+p {
+    overflow-x: visible; /* clips at sides ; (hidden; scroll; auto; no-display; no-content) */
+    overflow-y: hidden;
+    overflow: initial; /* scrolling methods for elements that overflow */
+}
