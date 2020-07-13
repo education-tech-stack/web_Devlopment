@@ -118,3 +118,61 @@
         onafterprint();     onblur();       onload();      //and many more
 
 // Image maps (if req. search inet)
+
+//####### ch-13 Javascript Objects ########
+
+obj=new Object();   //getting direct instance of object
+obj.name="ram";    //to add property to object
+obj.rollnumber=32;  //prop
+obj.getValue()      // calling method
+
+function bike(speed, engine, color){    // function template to create an object
+    this.speed=speed;
+    this.engine=engine;
+    this.color=color;
+}
+var mybike=new bike("120kmp", "v-6", "red");    //to create its instance or object
+var engine_type=mybike.engine;      // accessing the property
+
+//methods of an object
+function compute(){
+    var area=this.base*this.altitude*0.5;
+    return area;
+}
+function triangle(b, a){
+    this.base=base;
+    this.altitude=altitude;
+    this.area=compute;
+}
+var mytriangle=new triangle(20, 10);
+alert("area="+mytriangle.area());
+
+//Built-in/Standard Javascipt objects
+    //String object
+    var str=new String("str");      // or var str="str";   
+        //prop
+        str.constructor;    str.length;     str.prototype;
+        //meth
+        str.charAt(0);      // similary there are many more
+        //wrapper meth
+        str.bold();     //and many more
+    //RegExp Object
+    var regex=new RegExp("pattern", "flag");
+    var regex=/pattern/flag;
+        //flags : (g-globally; i-ignore case; m-multiline matching);    see the meth and prop
+    //Boolean
+    var bool=true;
+    var bool=Boolean(false);
+    //Number
+    var num=new Number(value);
+    var num=12.23;
+    //Array
+    var myarray=new Array(size);
+    var myarray=new Array(12,123,23,34);
+    var myarray=[23,34,546];
+    //Math
+        //used to perform opertions; no declaration; use, see prop and meth 
+    //Date
+        var date1=new Date();   // ((milliseconds); (yyyy,mm,dd[,hr,min,sec,millisec]); (mm dd,yyyy); (mm dd,yyyy hr:min:sec))
+        // see meth and prop 
+        

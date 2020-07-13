@@ -262,14 +262,37 @@ p {
     perspective-origin: left; /* (left; right; c; t; b; %; 50% 50%) */
     backface-visibility: visible; /* (visible and hidden) ; back side of an element */ 
 }
+@keyframes example {    /* to gradually change the animation; other than from, to %(as many times) can be used */
+    from {background-color: ivory;}
+    to {background-color: khaki;}
+}
 img {
-    resize: vertical;
-    animation-name: resize; /* on which ele animation to be applied */
+    animation-name: example; /* on which ele animation to be applied */
     animation-duration: 1s;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     animation-direction: reverse; /* (reverse; alternate; alternate-reverse) */
-    animation-delay: 0s;
-    animation-direction: reverse;
-    animation-fill-mode: backwards;
+    animation-delay: 0s;    /* -ve values allowed */
+    animation-direction: reverse; /* (normal(default); reverse; alternate; alternate-default) */
+    animation-fill-mode: backwards; /* (none; forwards-retains the style set last-key-frame; backwards-get style first key-frame,retain during animation delay; both) */
+}
+/* frames -- refer to divide a page into portions ; FRAME ele of HTML has become obsolete*/
+#frame {        /* makes a non movable left frame */
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    right: 0;
+    width: 100px;
+    height: 100%;
+}
+/* making a good scrollbar */
+body {
+    scrollbar-face-color: red;
+    scrollbar-base-color: rosybrown;
+    scrollbar-arrow-color: royalblue;
+    scrollbar-track-color: saddlebrown;
+    scrollbar-shadow-color: salmon;
+    scrollbar-highlight-color: sandybrown;
+    scrollbar-3dlight-color: seagreen;
+    scrollbar-darkshadow-color: seashell;
 }
