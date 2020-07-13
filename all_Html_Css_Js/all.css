@@ -242,3 +242,34 @@ html:not(:link):not(:visited) {color: #000;}
 /* Pseudo-Elements ( called so bcz not part of standard markup of HTML )
 syntax: selector::pseudo-element { property: value;}*/
 p::first-letter { font-size: 200%; font-weight: bold; float: left;} /* (first-line; first-letter; before; after) */
+
+/*##### ch-26 Effects, Frames, and Controls in CSS ####
+types: (opacity; transition; tranformation; animation)*/
+
+img{
+    opacity: 0.6; /* (0.1-1.0 | %) */
+    transition-property: opacity; /* which property to transite */
+    transition-duration: 2s;
+    transition-delay: 2s;
+    transition-timing-function: ease-in-out; /* (ease; linear; ease-in; ease-out; ease-in-out; cubic-bezier(n,n,n,n)) changes the speed of the transition */
+}
+p {
+    width: 100px;
+    transform: scale(12%); /* (matrix; rotate[X|Y]; scale; scale[Y|X]; skew; skew[X|Y]; translate; translate[X|Y]) */
+    transform-origin: left; /* (left; right; center; bottom; top; 50% 50%) */
+    transform-style: flat; /* (flat; perpective-3D) */
+    perspective: initial;
+    perspective-origin: left; /* (left; right; c; t; b; %; 50% 50%) */
+    backface-visibility: visible; /* (visible and hidden) ; back side of an element */ 
+}
+img {
+    resize: vertical;
+    animation-name: resize; /* on which ele animation to be applied */
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: reverse; /* (reverse; alternate; alternate-reverse) */
+    animation-delay: 0s;
+    animation-direction: reverse;
+    animation-fill-mode: backwards;
+}
