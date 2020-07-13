@@ -154,4 +154,91 @@ body {
 #logo {position: a;}    /* position describes its block; */
 #motto {position: b;}
 
-/* Multi-column method */
+/* Multi-column method (it enables you to show your elements content in multi-columns*/
+p {
+    column-count: 3;
+    column-width: 10px;
+    column-gap: 2px;    /* column padding */
+    column-rule: 2px groove greenyellow; /* border b/w columns; (column-rule-width: column-rule-style: column-rule-color:) */
+    column-fill: balance; /* balances the content of an element in all columns; (balance; auto) */
+    column-span: all; /* to span across multiple columns (integer; all) */
+    /* to insert column breaks; (auto; always; avoid; left; right; page; column; avoid-page; avoid-column) */
+    break-before: always;
+    break-after: avoid;
+    break-inside: avoid-column; 
+}
+
+/*#########################################################
+## ch-22 Displaying, Positioning and Floating an Element ##
+###########################################################*/
+
+p {
+    display: none; /* (none; block; inline; inline-block; inline-table; etc.) ; how to display and element; */
+    visibility: hidden; /* (visible; hidden; collapse; inherit) */
+    /* the element hidden using the display property as none does not preserves its space; 
+    while the element using visibility property as hidden preserves its space in a web page. */
+    
+    position: fixed; /* controls position wrt normal flow of elements; (relative; absolute; fixed; static; inherit)*/
+    top: 10px; /* (top; bottom; left; right) used with the position property */
+    z-index: -1; /* to overlap the contents */
+
+    float: right; /* float specific element wrt content or parent element; (left; right; none; inherit;) */
+    clear: both; /* to disable effect of float; (left; right; none; both; inherit); */
+}
+
+/*###########################
+### ch-23 List Styles #######
+#############################*/
+
+li {
+    list-style-type: none; /* (glyph; algorithmic; symbolic); these are types
+    glyph : (none; disc; circle; square)
+    algorithmic: (armenium; decimal; geogian; lower-alpha; lower-greek; lower-latin; lower-roman; and there upper-counterpart)
+    symbolic: (asterisks; footnotes)    */
+    list-style-image: url("myimg.jpg");
+    list-style-position: inside; /* (inside; outside) */
+    list-style: outside url("myimg.jpg") none;
+}
+
+/*#################################
+##### ch-24 Table Layouts #########
+###################################*/
+
+table {
+    table-layout: auto; /* (fixed; auto) */
+    caption-side: top; /* (top; bottom; inherit) */
+    border-collapse: collapse; /* (collapse; seperate; inherit) */
+    border-spacing: 1em 2em; /* (length; inherit) */
+    empty-cells: show; /* (show; hide; inherit) */
+}
+
+/*#### ch-25 Pseudo-Classes and Pseudo-Elements ####
+
+pseudo-classes used to add special effects to selectors;
+syntax: element: pseudo-class { property: value; }
+categories: (dynamic; target; lang; UI ele states; structural; negation)
+
+Dynamic (used for the links):*/
+a:link {color: greenyellow;} /* (:link; visited; hover; active) */
+/* target : if the user if target to following section liek http://ex.com/html/top.html#section2 */
+p:target {
+    color: grey;
+}
+/* UI ele sates */
+input[type="text"]:enabled { background: red;}
+input:checked { border: 1px solid pink;} /* (enabled; disabled; checked; indeterminate) */
+/* structural type */
+p:first-of-type { border: 2px solid black; background: lime;}
+li:first-child {border: 2px solid } /* (root; :nth-child; :nth-last-child; and many more) */
+/* different color for odd and even rows in table */
+tr:nth-child(odd) {background-color: lime;}
+tr:nth-child(even) {background-color: linen;}
+
+/* Negation */
+button:not([DISABLED]) {color: linen;}
+*:not(P) {color: #000;}
+html:not(:link):not(:visited) {color: #000;}
+
+/* Pseudo-Elements ( called so bcz not part of standard markup of HTML )
+syntax: selector::pseudo-element { property: value;}*/
+p::first-letter { font-size: 200%; font-weight: bold; float: left;} /* (first-line; first-letter; before; after) */
