@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<!--validation: http://validator.w3.org/ or http://validator.whatwg.org/ -->
-<html>
+<!--validation: http://validator.w3.org/ or http://validator.whatwg.org/ 
+    ch -2 fundamentals of HTML -->
+<html lang="en">    <!-- languages (en;hi(hindi);el(greek);de(german);ga(irish))-->
     <head>
         <title>My page</title>
         <base href="url" target="value"> <!--acts as a default or base url for all links; value:(_blank_; _parent_; _self_; _top; <framename>) -->
@@ -15,6 +16,46 @@
             <command type="radio" radiogroup="cars" label="Ferrari">    <!-- type-(checkbox,radio); icon-(URI); disabled; checked; radiogroup; title-->
         </menu>
         <section></section> <!-- represents a generic section-->
-        <nav></nav>     <!-- contains a group of links to navigate; generally used in fotter area-->
+        <nav></nav>     <!-- contains a group of links to navigate; generally used in fotter area -->
+        <article>
+            <header>
+                heading
+            </header>
+            <p>
+                content
+            </p>
+        </article>
+        <header>        <!-- introductory content on HTML page-->
+            <h1>heading</h1>
+            <a href="http://exmaple.com/section.html#sections">section element</a>
+            <nav><ul><li><a href="articles.html">articles</a></li></ul></nav>
+        </header>
+        <footer>    <!-- info such as links and copyright data-->
+            <ul>
+                <li>home</li>
+                <li>links</li>
+                <li>about</li>
+            </ul>
+        </footer>
+        <address>   <!-- normally at header or footer-->
+            <a href="anderson.html">Mathew</a>
+            <br>matt dave
+            <br>contact
+        </address>
+        <!-- href: scheme-http; userinfo-john:doe; example.com-host name; port: 80; authority:john:doe@example.com:80;
+             /over/there/.. is path; index-filename; dtb-extension; type1=anime?:parameter; ?name=ferret:query; nose:frangment-->
+        <a href="http://john:doe@example.com:80/over/there/index.dtb;type=anime1?name=ferret#nose"></a>
+        <!-- character entities: <(&lt); >(&gt); &(&amp); etc-->
+        <p>&lt; &gt;</p>
+        <!-- global attributes-->
+        <p class="" contenteditable="true" data-name="" draggable="true" hidden id="ele" spellcheck="true" style="width: 12px;" title="extrainfo">content</p>
+        <!-- global events attributes and many more-->
+        <p onerror="" onload="" onclick="" onfocus="" onsubmit="" onreset="" onkeydown="" onmouseover="">content</p>
+        <cite>remarks of an author</cite>
+        <q>quotation</q>
+        <dl>    <!-- defination list-->
+            <dt>defination</dt>
+            <dl>defination description</dl>
+        </dl>
     </body>
 </html> 

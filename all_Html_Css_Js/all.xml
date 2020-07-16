@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="true"?>   <!--standalone true-has internal DTD; flase-has external DTD; -->
+<!-- ch-28 basics of xml -->
+<employee>  <!-- there should be a root ele -->     <!-- ele can't start with : or xml(any case) -->
+    <firstname>Ambrish</firstname>      <!-- nested element as nested in employee ele -->
+    <lastname>Kumar</lastname>
+    <age>25</age>
+    <empid id="A24"></empid>    <!-- Empty ele -->  <!-- id is an attribute and the value should be in "" -->
+    <!-- Entity references- to use reserve words (<)-&lt; (>)-&gt; (&)-&amp; ("")-&quot; ('')-&apos; -->
+</employee>
+<!-- DTD for single ele -->
+<!DOCTYPE PRODUCTDATA[ <!ELEMENT PRODUCTDATA (PRODUCT+)> ]>
+<!-- qualifiers- ?-to 0 or more ele
+    *-zero or more ele
+    +-one or more ele
+    elements can be in group ((image, title)+)- to include an image for every title ele -->
+<!DOCTYPE employee [        <!-- INTERNAL DTD; include it at first after xml ele; external-<!DOCTYPE employee SYSTEM "email.dtd"> -->
+    <!ELEMENT employee (firstname, lastname, age, empid)>   <!-- DTD for nested ones -->
+    <!ELEMENT firstname (#PCDATA)>
+    <!ELEMENT lastname (#PCDATA)>
+    <!ELEMENT age (#PCDATA)>
+    <!ELEMENT empid (#PCDATA)>
+    <!ATTLIST empid id CDATA "000">     <!-- (ele-name; att-name; att-type; default-value) 
+        atttypes- (values seperated by |; CDATA- unparsed char data(str); ENTITIES; ENTITY; ID)
+        default-value- (value; #FIXED value; #REQUIRED; #IMPLIED- not compulsary to provide) -->
+    <!ENTITY writer "ken Greenwood"> <!-- entities are shortcut or aliases that are replaced by complete defination at runtime.
+        <!ENTITY en-name SYSTEM "URI/URL"> (EXTERNAL)
+        <!ENTITY en-name "en-defination"> (INTERNAL)
+        (can be used in xml as) <author>&writer;</author>
+        main use: to add copyright(long) file
+]>
+<!-- 
