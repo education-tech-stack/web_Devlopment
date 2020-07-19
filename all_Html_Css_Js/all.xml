@@ -26,6 +26,21 @@
         <!ENTITY en-name SYSTEM "URI/URL"> (EXTERNAL)
         <!ENTITY en-name "en-defination"> (INTERNAL)
         (can be used in xml as) <author>&writer;</author>
-        main use: to add copyright(long) file
+        main use: to add copyright(long) file -->
 ]>
-<!-- 
+<!-- namespaces-helps to avoid name conflicts while combining diff HTML and XML docs -->
+<root xmlns="http://www.example.com" xmlns:n="http://www.example2.com"> <!-- 1. default namespace; 2.(n); if (n) not specified then default applied.-->
+<table>
+    content
+</table>
+<n:bed>
+    content
+</n:bed>
+<!-- defining the namespace in DTD-->
+<!DOCTYPE title [
+    <!ELEMENT title (%inline;)*>
+    <!ATTLIST title     xmlns CDATA #FIXED "http://www.example.com/cassette">
+]>
+<!-- defines the structure of an ele with more features, such as data tyeps and conditions 
+scheme documents are organized by namespaces. means that all the components of a schema document belong to a target namespace 
+pre-defined data types: xs-string; date; numeric; misc; -->
