@@ -28,6 +28,9 @@
         (can be used in xml as) <author>&writer;</author>
         main use: to add copyright(long) file -->
 ]>
+
+<!-- ch-29 Implementing Advanced Features of XML -->
+
 <!-- namespaces-helps to avoid name conflicts while combining diff HTML and XML docs -->
 <root xmlns="http://www.example.com" xmlns:n="http://www.example2.com"> <!-- 1. default namespace; 2.(n); if (n) not specified then default applied.-->
 <table>
@@ -41,6 +44,29 @@
     <!ELEMENT title (%inline;)*>
     <!ATTLIST title     xmlns CDATA #FIXED "http://www.example.com/cassette">
 ]>
-<!-- defines the structure of an ele with more features, such as data tyeps and conditions 
-scheme documents are organized by namespaces. means that all the components of a schema document belong to a target namespace 
-pre-defined data types: xs-string; date; numeric; misc; -->
+
+<!-- XSD Schema: alternative to DTD; defines the structure of an ele with more features,
+ such as data types and conditions; scheme documents are organized by namespaces.
+  means that all the components of a schema document belong to a target namespace -->
+<!-- xml document to include a xsd file -->
+<note
+xmlns="https://www.w3schools.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="https://www.w3schools.com/xml note.xsd">    <!-- reference to a xml schema -->
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>
+<!-- a xsd or schema file 
+a file is started by root element like xs:schema -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="https://www.w3schools.com"
+xmlns="https://www.w3schools.com"
+elementFormDefault="qualified">
+<!-- xmlns:xs- user-defined namespace declaration
+targetNamespace: elements defined by schema (to, from, body..) come from specified url
+any element used by xml instance doc which were declared in this schema must be namespace qualified -->
+...
+...
+</xs:schema>
