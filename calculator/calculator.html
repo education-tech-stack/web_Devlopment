@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+    <TITLE>
+        Calculator using JS
+    </TITLE>
+    <SCRIPT TYPE="text/javascript" src="script.js"></SCRIPT>
+    <LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
+</HEAD>
+
+<BODY>
+<TABLE>
+    <THEAD>
+    <TR>
+        <TD colspan="6">Calculator using JS</TD>
+    </TR>
+    </THEAD>
+    <TR>
+        <TD COLSPAN="6">
+            <TEXTAREA NAME="TEXTAREA" AUTOFOCUS MAXLENGTH="10" PLACEHOLDER="Enter the expr here." id="text_area"></TEXTAREA>
+        </TD>
+    </TR>
+    <TR>
+        <TD><BUTTON>></BUTTON></TD>
+        <TD><button onclick="textArea('7');">7</button></TD>
+        <TD><button onclick="textArea('8');">8</button></TD>
+        <TD><button onclick="textArea('9');">9</button></TD>
+        <TD><button onclick="textArea('*');">*</button></TD>
+        <TD><button onclick="textArea('/');">/</button></TD>
+    </TR>
+    <TR>
+        <TD><button>C</button></TD>
+        <TD><button onclick="textArea('4');">4</button></TD>
+        <TD><button onclick="textArea('5');">5</button></TD>
+        <TD><button onclick="textArea('6');">6</button></TD>
+        <TD><button onclick="textArea('-');">-</button></TD>
+        <TD><button onclick="textArea('%');">%</button></TD>
+    </TR>
+    <TR>
+        <TD><button>AC</button></TD>
+        <TD><button onclick="textArea('1');">1</button></TD>
+        <TD><button onclick="textArea('2');">2</button></TD>
+        <TD><button onclick="textArea('3');">3</button></TD>
+        <TD><button onclick="textArea('+');">+</button></TD>
+        <TD><button onclick="textArea('^');">^</button></TD>
+    </TR>
+    <TR>
+        <TD><button onclick="textArea('0');">0</button></TD>
+        <TD><button onclick="textArea('00');">00</button></TD>
+        <TD><button onclick="textArea('.');">.</button></TD>
+        <TD><button onclick="textArea('=');">=</button></TD>
+        <TD><button onclick="textArea('8');">GT</button></TD>
+        <TD><button onclick="textArea('-');">+/-</button></TD>
+    </TR>
+</TABLE>
+</BODY>
+</HTML>
