@@ -57,5 +57,188 @@
             <dt>defination</dt>
             <dl>defination description</dl>
         </dl>
+        
+        <!--##### ch-3 Working with text #####-->
+        
+        <!-- Html physical style elements -->
+            <b class="class" id="id" lang="en" style="width: auto;" title="myele">to bold</b>
+            <i>to italics</i>
+            <small>small font size</small>
+            <sub>subscript</sub>
+            <sup>superscript</sup>
+        <!-- Html logical style elements (same attr as physical style) -->
+            <code>program code</code>
+            <em>emphasizes text</em>
+            <strong>emphasizes text by increasing boldness</strong>
+            <blockquote>to display long quotations</blockquote>
+            <ins>displays inserted text</ins>
+            <del>displays deleted text</del>
+            <var>represents a variable</var>
+            <bdo dir="ltr">changes the direction of text</bdo>
+            
+        <!--##### ch-4 Organizing Text in HTML #####-->
+
+            <pre>preformatted text; already formatted need not to be again; usually for the code snippets and poems</pre>
+            <div>block level ele; to divide a web page into different divisions; acts as a container</div>
+            <span>change the style of the text enclosed using style attr</span>
+            <ul><li>for unordered list</li></ul>
+            <ol><li>for   ordered list</li></ol>
+
+        <!--##### ch-5 Working with Links and URLs #####-->
+
+            <a href="index.html#top" target="_self" id="top" class="demo">link</a>
+            <!-- target(_blank: open in a new unnamed window; _self: current window(default);
+                 _parent: open in a parent window(used with frame); _top: open in the top-most window;
+                 framename: in a named frame -->
+            <link rel="stylesheet" href="all.css" > <!-- link is used to connect to an external document -->
+
+        <!--##### ch-6 Creating Tables #####-->
+
+            <table>     <!-- (caption; colgroup; col; tbody; thead; tfoot; tr; td; th)-->
+                <caption>herer goes the caption</caption>
+                <colgroup span="3" style="color: blue">appliying style to multiple columns; 
+                    must be placed after caption and before tbody, thead, tr ele</colgroup>
+                <col style="background-color: blue;"> <!-- to define properties of each columns; can be defined inside Colgroup-ele-->
+                <thead>
+                    <tr><td colspan="2">this is table header</td></tr>
+                </thead>
+                <tfoot>
+                    <tr><td colspan="2">this is table footer</td></tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <th colspan="2">table heading cell</th>
+                    </tr>
+                    <tr>    <!-- tr: term row; td: term description or standard cell; th: header cells-->
+                        <td> first cell of table </td>
+                        <td> second cell of table </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        <!--##### ch-7 Working with Images, Color, and Canvas #####-->
+
+            <img src="img.jpg" alt="alternateText" height="30px" width="20px">  <!--ismap(Boolean); usemap: associate element with an image map-->
+            <canvas id="canvas" width="50" height="100">bowser does not support canvas; used to draw 2-D figures</canvas>
+        
+        <!--##### ch-8 Working with Forms #####-->
+
+            <form action="sumbit.html" autocomplete="on" name="form" enctype="text/plain" method="GET"> <!-- (accept-character: char-set in form that can be accepted by server;-->
+                <!--ele:(text&search; tel; url; email; passwd; datetime-local; datetime,d,m,w,time; no. and range; file; hidden; checkbox; radio; submit; reset)-->
+                1. creating a form 
+                    username: <input type="text" name="user" id="demo"><br>
+                    passwd:   <input type="password" name="password" id="demo2" maxlength="8" value="000000" size="8"><br>
+                    <input type="submit" value="submit">
+                2. creating a hidden field
+                    name: <input type="text" name="name" id="name"><br>
+                    country: <input type="hidden" name="country" id="country" value="india"><br>
+                    <input type="submit" value="sumbit" onclick="alert('hello'+document.getElementById('name').value + 'from' + document.getElementById('country').value)"><br>
+                3. checkbox filed ( to select on or more items from the list )
+                    select one of three choices <br>
+                    <input type="checkbox" name="option1" value="Milk">Milk <br>
+                    <input type="checkbox" name="option2" value="Butter">Butter <br>
+                    <input type="checkbox" name="option3" value="Cheese">Cheese <br>
+                4. Radio Button Field (to select more than one option)
+                    <input type="radio" name="group1" value="Milk">Milk <br>
+                    <input type="radio" name="group1" value="Butter">Butter <br>
+                    <input type="radio" name="group1" value="Cheese">Cheese <br>
+                5. Reset Button Field 
+                    <input type="reset" value="reset" value="reset">
+                6. Select and Option Element (drop-down list) attr-select:(disabled; name; size; autofocus; form; multiple) attr-option:(label; disabled; selected; value)
+                    <select name="select">
+                        <option value="mango">mango</option>
+                        <option value="orange">orange</option>
+                        <option value="banana">banana</option>
+                    </select>
+                7. OPTGROUP Element (used to group the list of options and display in the single drop-down list) attr:(label; disabled)
+                    <select>
+                        <optgroup label="fruits">
+                            <option value="mango">mango</option>
+                            <option value="orange">orange</option>
+                        </optgroup>
+                        <optgroup label="vegetables">
+                            <option value="cabbage">cabbage</option>
+                            <option value="tomato">tomato</option>
+                        </optgroup>
+                    </select>
+                8. TEXTAREA (used to displa a text field) attr:(readonly; access-key(shortcut-key); autofocus; placeholder(hint); required; wrap)
+                    <textarea name="txtarea" id="23" cols="30" rows="10">Enter your text here</textarea>
+                9. FILEDSET and LEGEND elements
+                    <fieldset>
+                        <legend>Login window</legend>
+                        <label>     <!-- atttr: (for: associates with specific control, value must match the id-attr of associated control; form: refers to id of a form)-->
+                            username <input type="text">
+                        </label>
+                        <label >
+                            password <input type="text">
+                        </label>
+                        <label>
+                            <input type="submit" value="click!">
+                        </label>
+                    </fieldset>
+                10. Button Element attr:(autofocus; disabled; form; formaction; formmethod; formtarget)
+                    <button type="submit" style="color: red; font-size: 20px;">submit</button>
+                    a img as a button 
+                    <button type="submit"> <img src="back.png" alt="not" width="50" height="50"> </button>
+                11. Progress Element
+                    Current task is : <progress value="200" max="500"></progress> completed
+                12. Meter Element
+                    <meter value="5" min="0" max="10" style="width: 200px;"></meter> Passing
+                    <meter value="7" min="0" max="10" style="width: 200px;"></meter> Your Score
+                13. Datalist Element
+                    <input type="text" name="favCar" list="Cars">
+                    <datalist id="cars">
+                        <option value="Bmw"></option>
+                        <option value="Porsche"></option>
+                        <option value="Audi"></option>
+                        <option value="Ford"></option>
+                    </datalist>
+                14. Output Element
+                    <output name="result" onload="document.forms['form']['result'].value=23+123;"></output>
+            </form>
+
+        <!--##### ch-9 Interactive Elements #####-->
+
+            1. KBD Element (to display keyboard text)
+                <kbd>ctrl+alt+del</kbd>
+            2. Time Element 
+                <time datetime="2010-12-10T09:00-07:00">9am last monday</time>
+                <time pubdate datetime="2010-12-30">today</time>
+        
+        <!--##### ch-10 Working with Multimedia #####-->
+
+            1. Audio Element - setting the background sound attr:(controls; loop))
+                <audio src="music.ogg" autoplay>Your browser does not support the audio element</audio>
+
+            2. Video Element attr:(audio; autoplay; height; loop; poster; width)
+                <video src="bunny.pgv" controls>not supported</video>
+
+            3. Embed Element attr:(height; width; hspace(horizontal padding); type)
+                <embed src="music.mp3" type="mp3" width="600" height="100">not supported</embed>
+                embeding a video file from other websites
+                <object data="" type="">
+                    <param name="movie" value="http://www.youtube.com/"></param>
+                    <param name="allowFullScreen" value="true"></param>
+                    <param name="allowscriptaccess" value="always"></param>
+                    <embed src="url" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true"></embed>
+                </object>
+                adding Multimedia
+                <object data="music.mp3" type="mp3"></object>
+
+            4. Initializing an Object using Param (slider)  attr:(data(url of obj's data); form; type)
+                <object classid="clsid:F08DF954-8592-11D1-B16A-00C0F0283628" id="slider1" width="100" height="50">
+                    <param name="BorderStyle" value="1">
+                    <param name="Enabled" value="1">
+                    <param name="MousePointer" value="0">
+                    <param name="Min" value="0">
+                    <param name="Max" value="10">
+                </object>
+            5. Figure and Figcaption Element
+                <figure>
+                    <img src="car.jpg" alt="unable"><br>
+                    <figcaption>Figure showing you a small car.</figcaption>
+                </figure>
+
+        <!--##### HTML5 Black Book Reference Completed #####-->
     </body>
 </html> 
