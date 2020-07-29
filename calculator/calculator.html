@@ -9,6 +9,8 @@
 </HEAD>
 
 <BODY>
+<div class="back"> </div>
+<div class="main">
 <TABLE>
     <THEAD>
     <TR>
@@ -21,37 +23,38 @@
         </TD>
     </TR>
     <TR>
-        <TD><BUTTON>></BUTTON></TD>
-        <TD><button onclick="textArea('7');">7</button></TD>
-        <TD><button onclick="textArea('8');">8</button></TD>
-        <TD><button onclick="textArea('9');">9</button></TD>
-        <TD><button onclick="textArea('*');">*</button></TD>
-        <TD><button onclick="textArea('/');">/</button></TD>
+        <TD><button class="success" onclick="clear1();">></button></TD>
+        <TD><button onclick="textArea('7');" class="success">7</button></TD>
+        <TD><button onclick="textArea('8');" class="success">8</button></TD>
+        <TD><button onclick="textArea('9');" class="success">9</button></TD>
+        <TD><button onclick="textArea('*');" class="success">*</button></TD>
+        <TD><button onclick="textArea('/');" class="success">/</button></TD>
     </TR>
     <TR>
-        <TD><button>C</button></TD>
-        <TD><button onclick="textArea('4');">4</button></TD>
-        <TD><button onclick="textArea('5');">5</button></TD>
-        <TD><button onclick="textArea('6');">6</button></TD>
-        <TD><button onclick="textArea('-');">-</button></TD>
-        <TD><button onclick="textArea('%');">%</button></TD>
+        <TD><button onclick="allClear();" class="success">C</button></TD>
+        <TD><button onclick="textArea('4');" class="success">4</button></TD>
+        <TD><button onclick="textArea('5');" class="success">5</button></TD>
+        <TD><button onclick="textArea('6');" class="success">6</button></TD>
+        <TD><button onclick="textArea('-');" class="success">-</button></TD>
+        <TD><button onclick="textArea('%');" class="success">%</button></TD>
     </TR>
     <TR>
-        <TD><button>AC</button></TD>
-        <TD><button onclick="textArea('1');">1</button></TD>
-        <TD><button onclick="textArea('2');">2</button></TD>
-        <TD><button onclick="textArea('3');">3</button></TD>
-        <TD><button onclick="textArea('+');">+</button></TD>
-        <TD><button onclick="textArea('^');">^</button></TD>
+        <TD><button onclick="allClear();" class="success">AC</button></TD>
+        <TD><button onclick="textArea('1');" class="success">1</button></TD>
+        <TD><button onclick="textArea('2');" class="success">2</button></TD>
+        <TD><button onclick="textArea('3');" class="success">3</button></TD>
+        <TD><button onclick="textArea('+');" class="success">+</button></TD>
+        <TD><button onclick="textArea('^');" class="success">^</button></TD>
     </TR>
     <TR>
-        <TD><button onclick="textArea('0');">0</button></TD>
-        <TD><button onclick="textArea('00');">00</button></TD>
-        <TD><button onclick="textArea('.');">.</button></TD>
-        <TD><button onclick="textArea('=');">=</button></TD>
-        <TD><button onclick="textArea('8');">GT</button></TD>
-        <TD><button onclick="textArea('-');">+/-</button></TD>
+        <TD><button onclick="textArea('0');" class="success">0</button></TD>
+        <TD><button onclick="textArea('00');" class="success">00</button></TD>
+        <TD><button onclick="textArea('.');" class="success">.</button></TD>
+        <TD><button onclick="compute();" class="success">=</button></TD>
+        <TD><button onclick="compute();" class="success">GT</button></TD>
+        <TD><button onclick="textArea('-');" class="success">+/-</button></TD>
     </TR>
 </TABLE>
+</div>
 </BODY>
 </HTML>

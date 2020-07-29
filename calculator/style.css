@@ -1,9 +1,38 @@
-TABLE {width: 100%;
-padding: 10px;
-text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
-
-TEXTAREA {width: 100%;}
-
-tr {width: 25%;
-padding: 10px;}
+thead{
+    text-align: center;
+    font-weight: bold;
+    color: whitesmoke;
+}
+button{
+    width: 50px;
+    height: 50px;
+    font-size: 15px;
+    margin: 2;  
+    cursor: pointer;
+    border-radius: 9px;
+}
+textarea{
+    margin: 5px;
+    font-size: 15px;
+    padding: 5px;
+    width: 93%;
+    border-radius: 9px;
+}
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 315px;
+    padding: 11px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.back{
+    background-image: linear-gradient(to right, #e91e61, #3f51b5);
+    height: 800px;
+}
