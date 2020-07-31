@@ -297,4 +297,62 @@ body {
     scrollbar-darkshadow-color: seashell;
 }
 
-/* HTML5 Black Book CSS Reference Completed
+/* HTML5 Black Book CSS Reference Completed*/
+
+/*##### W3 CSS tutorials #####*/
+
+/* always include */
+* { box-sizing: border-box;}
+
+/* Media Queries ; used to view(width and height of viewport; w&h device; orientation; resolution)*/
+    @media not mediatype and (expressions) {    /*  (not|only) */
+        /* css code ; Unless specified not|only operators, the media type is optional and the all type will be implied.
+        You can also have different stylesheets for different media:
+        <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+        meditypes: all; print(printers); screen; speech(screenreaders);*/
+    }
+    @media screen and (min-width: 480px){ /* chages bg-color if screen width increases 480px; */
+        body { background-color: lightblue;}
+    }
+    /* expressions: (orientation: landscape); 
+    using additional value; or it acts like an OR operator;*/
+    @media screen and(max-width: 900px) and (min-width: 600px), (min-width: 1100px){
+        div.row { font-size: 50px;}
+    }
+
+/* Gradient Styles types:2(linear-gradient; radial-gradient)
+    background-image: linear-gradient(direction, color-stop1, color-stop2,...);*/
+    div {
+        background-image: linear-gradient(to right, red, yellow);
+        background-image: linear-gradient(to bottom right, red, yellow);
+        background-image: linear-gradient(to bottom right, red, yellow, green);
+        background-image: repeating-linear-gradient(to right, red, yellow 10%, green 20%);
+        /* radial gradient
+        background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+        default: shape:ellipse; size:farthest-corner; position:center;*/
+        background-image: radial-gradient(circle, red 5%, yellow 15%, green 60%);
+    }
+
+/* shadows (text & box );
+    text: text-shadow: horizontal-shadow vertical-shadow transparency color, [same para for multiple shadows];*/
+    div { text-shadow: 5px 10px 2px red;}
+    /* box-shadow: same as text-shadow;
+    to draw paper like cards; */
+    div.cards { box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2), 0 6px 20px 0 rgba(0,0,0, 0.19);} 
+
+/* object-fit prop ; used to specify how an img/video should resized; to preserve aspect ratio;*/
+    div{ object-fit: cover;} /* cut off sides image; preserving aspect ratio; */
+    /* values: contain(display whole fig); scale-down; */
+
+/* parallax-effect (does not always work on smart phones); use media queries;
+    basic: use a container ele add bg-img to it with specific height;
+        then use background-attchment: fixed; to create the effect;*/
+        div {
+            background-image: url("img.jpg");
+            height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        } /* to use height in % or 100% make html, body {height: 100%;}*/
+        

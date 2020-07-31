@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Design</title>
+</head>
+<body>
+    HTML layout Design Techniques
+    There are multiple Techniques to create multi-column layout:
+    1. CSS framwork; 2. CSS Float Property; 3. CSS Flexbox; 4. CSS Grid
+    1.: For fast layout: CSS Frameworks like w3.css & bootstrap
+    2.: Not very flexble;
+    
+    3.: Flexbox Layout
+        a. First define the flex container and make it flexible by using display prop to flex;
+            <div style="display: flex;  /*flex:(flex-direction; flex-flow; flex-wrap; justify-content; align-items; align-content);*/
+            flex-direction: column;     /*flex-direction: column(vertically); column-reverse; row(horizontally); row-reverse;*/
+            flex-wrap: wrap;            /*values: wrap; nowarp; wrap-reverse;
+            flex-flow: row wrap;        /*shorthand prop for dire,wrap;
+            justify-content: center;    /*val: center; flex-start; flex-end; space-around(space before,b/w,end); space-between;
+            height: 200px;              /*just for better understanding of align-items*/
+            align-items: center;        /*val: center; flex-start; flex-end; stretch(default); baseline(align items as there baseline);
+            align-content: space-between;/*val: space-between; space-around; stretch; center; flex-start; flex-end;*/">
+                all the elements inside the flex-container acts as felx ele; porp of flex-items:order; flex-grow; flex-shrink; flex-basics; flex; align-self;
+                order: used to order items; default=0;
+                flex-grow:   how a flex-item grow relative to other items; default=0; 3rd div is 8times large than others;
+                flex-shrink: how much item shrink relative to other items; default=1; 3rd ele will not shrink compared to other ele;
+                flex-basics: specifies initial length; 4th ele;
+                flex:        shorthand for grow, shrink, basis;
+                align-self:  specifies the alignment; ovverides align-content prop of parent; val:center; flex-start; flex-end; 
+                <div style="order: 1; flex-grow: 1;">1</div>
+                <div style="order: 2; flex-grow: 1;">2</div>
+                <div style="flex-grow: 8; flex-shrink: 0;">3</div>
+                <div style="flex-basis: 200px;">4</div>
+            </div>
+
+            FlexLayout website structure
+                <div class="header"> my website </div>
+                <div class="nav">
+                    <a href="#">link</a>
+                    <a href="#">link</a>
+                    <a href="#">link</a>
+                </div>
+                <div class="row">
+                    <div class="side"> about me <img src="#" alt="#"> </div>
+                    <div class="main"> main paragraph <img src="#" alt="#"></div>
+                </div>
+                <div class="footer"> footer </div>
+                <style>
+                    * { box-sizing: border-box;}
+                    body { margin: 0;}
+                    .nav { display: flex;}
+                    .row {
+                        display: flex;
+                        flex-wrap: wrap;
+                    } /*creating 2 unequal columns that sits next to each other;*/
+                    .side { flex: 30%;}
+                    .main { flex: 70%;}
+                    /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+                    @media screen and (max-width: 700px){
+                        .row .nav {
+                            flex-direction: column;
+                        }
+                    }
+                </style>
+
+            Flex Responsive Photo Grid
+                <div class="row">
+                    <div class="column">
+                        <img src="" alt="" width="100%"> add as many
+                    </div>
+                    <div class="column">
+                        <img src="" alt="" width="100%"> add as many
+                    </div>
+                    <div class="column">
+                        <img src="" alt="" width="100%"> add as many
+                    </div>
+                    <div class="column">
+                        <img src="" alt="" width="100%"> add as many
+                    </div>
+                </div>
+                <style>
+                    * { box-sizing: border-box;}
+                    body { margin: 0;}
+                    .row {
+                        display: flex;
+                        flex-wrap: wrap;
+                    } /* Create four equal columns that sits next to each other */
+                    .column {
+                        flex: 25%;
+                        max-width: 25%;
+                    }
+                    .column img {
+                        margin-top: 8px;
+                        vertical-align: middle;
+                    } /* Responsive layout - makes a two column-layout instead of four columns */
+                    @media (max-width: 800px) {
+                    .column {
+                        flex: 50%;
+                        max-width: 50%;
+                    }} /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+                    @media (max-width: 600px) {
+                    .column {
+                        flex: 100%;
+                        max-width: 100%;
+                    }}
+                </style>
+</body>
+</html>
