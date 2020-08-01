@@ -10,7 +10,7 @@
 <body>
     <div id="mobNav">
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-        <img src="logo.png" alt="logo">
+        <img src="logo.png" alt="logo" class="logo">
     </div>
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -25,12 +25,13 @@
     </div>
 
     <div class="topnav">
-        <a href="#" class="active">Home</a>
+        <a href="home.html"><img src="logo.png" alt="logo"></a>
+        <a href="home.html" class="active">Home</a>
         <a href="#">Products</a>
         <a href="#">Applications</a>
         <a href="#">About Us</a>
         <a href="#">Carrer</a>
-        <a href="#">Contact Us</a>
+        <a href="#" id="contactUs">Contact Us</a>
       </div>
 </body>
 </html>
