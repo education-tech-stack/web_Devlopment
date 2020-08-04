@@ -128,8 +128,33 @@ html, body {
 .reg {
     background-color: lightblue;
 }
+/* quote */
+.quoteContainer {
+  width: 100%;
+  background-image: url("cta.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.quote {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  background: rgba(191, 0, 255, 0.6);
+  color: white;
+}
+.quote {
+  padding: 10px;
+  min-height: 140px;
+}
+
 /* for desktop */
-@media only screen and (min-width: 412px){
+@media only screen and (min-width: 450px){
+  .quote {
+    display: flex;
+    flex-direction: row;
+  }
+  .quote div { flex: 50%;}
   .welcome {
     display: flex;
     flex-direction: row;
