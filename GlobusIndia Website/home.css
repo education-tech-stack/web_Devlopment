@@ -155,9 +155,9 @@ body {
   background: rgba(191, 0, 255, 0.6);
   color: white;
   padding: 10px;
-  min-height: 140px;
+  min-height: 300px;
 }
-.quoteContainer .quote button {
+.allButton {
   background-color: white;
   border: 2px solid white;
   padding: 16px 32px;
@@ -171,13 +171,58 @@ body {
   font-size: large;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.quoteContainer .quote button:hover {
+.allButton:hover {
   background-color: transparent;
   color: white;
+}
+/* Cards */
+div.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+div.cardsContainer div.cards {
+  display: block;
+  text-align: center;
+  max-width: 250px;
+  margin-top: 10px;
+}
+div.cardsContainer div.cards img {
+  max-width: 250px;
+}
+div.cardsContainer div.cards:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2), 0 6px 20px 0 rgba(0,0,0, 0.19);
+}
+div.cardsContainer .allButton{
+  background-color: rgba(191, 0, 255, 1);
+  border-color: rgba(191, 0, 255, 1);
+  color: white;
+}
+div.cardsContainer .allButton:hover {
+  background-color: transparent;
+  color: rgba(191, 0, 255, 1);
+}
+div.pad {
+  padding: 10px;
+}
+div.padText {
+  font-weight: 300;
+}
+
+.quote2 {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* for desktop */
 @media only screen and (min-width: 710px){
+  div.cardsContainer {
+    flex-direction: row;
+  }
+  div.cardsContainer div.cards {
+    flex: 25%;
+  } 
   .quote {
     display: flex;
     flex-direction: row;
