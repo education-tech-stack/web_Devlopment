@@ -40,7 +40,7 @@
       </div>
     <div class="w3-bar w3-top w3-hide-large w3-white" style="height: 10vh;" id="header-mobile">
         <a href="#home" class="w3-bar-item"><img src="images/logo.png" alt="Logo" id="logo" style="max-height: 7vh;"></a>
-        <a href="#home" class="w3-bar-item w3-button w3-right w3-padding-24" onclick="openNav();"><i class="fas fa-bars"></i> Menu</a>
+        <a href="#home" class="w3-bar-item w3-button w3-right w3-padding w3-hover-none" onclick="openNav();"><i class="w3-border w3-border-black w3-padding w3-round-large fas fa-bars"></i></a>
     </div>
 
     <div class="w3-row" id="home">
@@ -61,7 +61,7 @@
         <div class="w3-half my-center my-responsive-height my-orange-pantone w3-card my-responsive-stick">
             <h2 class="w3-tangerine my-text-bold">About Us</h2>
         </div>
-        <div class="w3-half w3-padding w3-card my-responsive-text-align my-responsive-stick">
+        <div class="w3-half w3-padding w3-card my-responsive-text-align">
             <h3 class="w3-tangerine my-text-orange-pantone w3-center">Globus India</h3>
             <div class="w3-padding my-responsive-text-align">
             Sample Text: Rudraksh Polychem is one of the fastest and youngest growing company,
@@ -86,9 +86,133 @@
                          who assist us in the sourcing of quality raw materials which in turn give quality finished products. We can also develop products and raw materials as per the customers' requirements.
                 </div></div>
     </div>
-    <h2 id="product" class="w3-tangerine my-text-bold w3-center">Products</h2>
-    <div class="w3-row">
+
+    <div class="w3-row" id="product">
+        <div class="w3-half my-center my-responsive-height my-blue-violet w3-card my-responsive-stick">
+            <h2 class="w3-tangerine my-text-bold">Products</h2>
+        </div>
+        <div class="w3-half w3-card w3-center">
+            <div class="w3-row">
+                <div class="w3-half">
+                    <div style="background-image: url(images/product1.jpg);" class="my-image-card">
+                        <div class="my-black-opacity my-center">
+                            <div class="my-center my-card-flex my-card-border my-transition w3-text-white w3-hover-text-white my-hover-blue-violet my-hover-border-blue-violet">
+                                <h4 >Black Masterbatch</h4>
+                                <div class="my-text-overflow">
+                                    Globus India incorporates one of the best in-class technologies to produce their black masterbatches with highest levels of dispersion and carbon black loading levels. From the basic injection molding application to fine film application we have got...
+                                </div>    
+                                <div class="w3-padding"><button class="w3-button my-read-button my-hover-text-blue-violet w3-hover-white my-transition" onclick="document.getElementById('id01').style.display='block'"><h5>Read More</h5></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-half">
+                    <div style="background-image: url(images/product2.jpg);" class="my-image-card">
+                        <div class="my-black-opacity my-center">
+                            <div class="my-center my-card-flex my-card-border my-transition w3-text-white w3-hover-text-white my-hover-blue-violet my-hover-border-blue-violet">
+                                <h4 >White Masterbatch</h4>
+                                <div class="my-text-overflow">
+                                    Globus India offers a wide range of white masterbatches with a concentration from 20% to 70% titanium dioxide based on PE, PP, PS, PA, ABS, and polyester. For customised applications where specific shades of white are required we offer...
+                                </div>
+                                <div class="w3-padding"><button class="w3-button my-read-button my-hover-text-blue-violet w3-hover-white my-transition" onclick="document.getElementById('id02').style.display='block'"><h5>Read More</h5></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-half">
+                    <div style="background-image: url(images/product3.jpg);" class="my-image-card">
+                        <div class="my-black-opacity my-center">
+                            <div class="my-center my-card-flex my-card-border my-transition w3-text-white w3-hover-text-white my-hover-blue-violet my-hover-border-blue-violet">
+                                <h4 >Additive Masterbatch</h4>
+                                <div class="my-text-overflow">
+                                    Globus India offers innovative, cost-effective solution to enhance products visual appearance, functionality and performance depending on nature of requirements. Various categories of effect masterbatches offered by Globus India are...
+                                </div>
+                                <div class="w3-padding"><button class="w3-button my-read-button my-hover-text-blue-violet w3-hover-white my-transition" onclick="document.getElementById('id03').style.display='block'"><h5>Read More</h5></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-half">
+                    <div style="background-image: url(images/product4.png);" class="my-image-card">
+                        <div class="my-black-opacity my-center">
+                            <div class="my-center my-card-flex my-card-border my-transition w3-text-white w3-hover-text-white my-hover-blue-violet my-hover-border-blue-violet">
+                                <h4 >Colour Masterbatch</h4>
+                                <div class="my-text-overflow">
+                                    Globus India offers a wide range of colour masterbatches for different applications and with required regulatory compliances. We offer thousands of shades in Colour Masterbatches, with a wide selection of standard colours available...
+                                </div>
+                                <div class="w3-padding"><button class="w3-button my-read-button my-hover-text-blue-violet w3-hover-white my-transition" onclick="document.getElementById('id04').style.display='block'"><h5>Read More</h5></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom w3-card-4">
+          <header class="w3-container my-blue-violet"> 
+            <span onclick="document.getElementById('id01').style.display='none'" 
+            class="w3-button w3-display-topright"><i class="fas fa-times-circle"></i></span>
+            <h2>Modal Header</h2>
+          </header>
+          <div class="w3-container">
+            <p>Some text..</p>
+            <p>Some text..</p>
+          </div>
+          <footer class="w3-container my-blue-violet">
+            <p>Modal Footer</p>
+          </footer>
+        </div>
+      </div>
+      <div id="id02" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom w3-card-4">
+          <header class="w3-container my-blue-violet"> 
+            <span onclick="document.getElementById('id02').style.display='none'" 
+            class="w3-button w3-display-topright"><i class="fas fa-times-circle"></i></span>
+            <h2>Modal Header</h2>
+          </header>
+          <div class="w3-container">
+            <p>Some text..</p>
+            <p>Some text..</p>
+          </div>
+          <footer class="w3-container my-blue-violet">
+            <p>Modal Footer</p>
+          </footer>
+        </div>
+      </div>
+      <div id="id03" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom w3-card-4">
+          <header class="w3-container my-blue-violet"> 
+            <span onclick="document.getElementById('id03').style.display='none'" 
+            class="w3-button w3-display-topright"><i class="fas fa-times-circle"></i></span>
+            <h2>Modal Header</h2>
+          </header>
+          <div class="w3-container">
+            <p>Some text..</p>
+            <p>Some text..</p>
+          </div>
+          <footer class="w3-container my-blue-violet">
+            <p>Modal Footer</p>
+          </footer>
+        </div>
+      </div>
+      <div id="id04" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom w3-card-4">
+          <header class="w3-container my-blue-violet"> 
+            <span onclick="document.getElementById('id04').style.display='none'" 
+            class="w3-button w3-display-topright"><i class="fas fa-times-circle"></i></span>
+            <h2>Modal Header</h2>
+          </header>
+          <div class="w3-container">
+            <p>Some text..</p>
+            <p>Some text..</p>
+          </div>
+          <footer class="w3-container my-blue-violet">
+            <p>Modal Footer</p>
+          </footer>
+        </div>
+      </div>
 
     <script src="js/my.js"></script>
 </body>
