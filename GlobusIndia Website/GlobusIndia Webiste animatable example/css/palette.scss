@@ -1,0 +1,47 @@
+/* Coolors Exported Palette - https://coolors.co/ffffff-ff715b-496ddb-62c370-20063b */
+
+/* CSS HEX */
+--white: #ffffffff;
+--bittersweet: #ff715bff;
+--royal-blue-light: #496ddbff;
+--emerald: #62c370ff;
+--russian-violet: #20063bff;
+
+/* CSS HSL */
+--white: hsla(0, 0%, 100%, 1);
+--bittersweet: hsla(8, 100%, 68%, 1);
+--royal-blue-light: hsla(225, 67%, 57%, 1);
+--emerald: hsla(129, 45%, 57%, 1);
+--russian-violet: hsla(269, 82%, 13%, 1);
+
+/* SCSS HEX */
+$white: #ffffffff;
+$bittersweet: #ff715bff;
+$royal-blue-light: #496ddbff;
+$emerald: #62c370ff;
+$russian-violet: #20063bff;
+
+/* SCSS HSL */
+$white: hsla(0, 0%, 100%, 1);
+$bittersweet: hsla(8, 100%, 68%, 1);
+$royal-blue-light: hsla(225, 67%, 57%, 1);
+$emerald: hsla(129, 45%, 57%, 1);
+$russian-violet: hsla(269, 82%, 13%, 1);
+
+/* SCSS RGB */
+$white: rgba(255, 255, 255, 1);
+$bittersweet: rgba(255, 113, 91, 1);
+$royal-blue-light: rgba(73, 109, 219, 1);
+$emerald: rgba(98, 195, 112, 1);
+$russian-violet: rgba(32, 6, 59, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #ffffffff, #ff715bff, #496ddbff, #62c370ff, #20063bff);
+$gradient-right: linear-gradient(90deg, #ffffffff, #ff715bff, #496ddbff, #62c370ff, #20063bff);
+$gradient-bottom: linear-gradient(180deg, #ffffffff, #ff715bff, #496ddbff, #62c370ff, #20063bff);
+$gradient-left: linear-gradient(270deg, #ffffffff, #ff715bff, #496ddbff, #62c370ff, #20063bff);
+$gradient-top-right: linear-gradient(45deg, #ffffffff, #ff715bff, #496ddbff, #62c370ff, #20063bff);
+$gradient-bottom-right: linear-gradient(135deg, #ffffffff, #ff715bff, #496ddbff, #62c370ff, #20063bff);
+$gradient-top-left: linear-gradient(225deg, #ffffffff, #ff715bff, #496ddbff, #62c370ff, #20063bff);
+$gradient-bottom-left: linear-gradient(315deg, #ffffffff, #ff715bff, #496ddbff, #62c370ff, #20063bff);
+$gradient-radial: radial-gradient(#ffffffff, #ff715bff, #496ddbff, #62c370ff, #20063bff);

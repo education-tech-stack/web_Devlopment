@@ -1,0 +1,14 @@
+.my-mango { color:white!important; background-color: #ffbe0bff!important;}
+.my-orange-pantone { color:white!important; background-color: #f7484e!important;}
+.my-winter-sky { color:white!important; background-color: #ff006eff!important;}
+.my-blue-violet { color:white!important; background-color: #8338ecff!important;}
+.my-azure { color:white!important; background-color: #3a86ffff!important;}
+
+.my-text-mango { color: #ffbe0bff!important;}
+.my-text-orange-pantone { color: #f7484e!important;}
+.my-text-winter-sky { color: #ff006eff!important;}
+.my-text-blue-violet { color: #8338ecff!important;}
+.my-text-azure, .my-hover-text-azure:hover { color: #3a86ffff!important;}
+
+.my-gradient{ color: white!important; background-color: linear-gradient(0deg, #ffbe0bff, #fb5607ff, #ff006eff, #8338ecff, #3a86ffff)!important;}
+
