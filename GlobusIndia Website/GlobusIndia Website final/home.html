@@ -61,17 +61,15 @@
         <div class="w3-half my-center my-responsive-height my-orange-pantone my-responsive-stick">
             <h2 class="w3-tangerine my-text-bold">About Us</h2>
         </div>
-        <div class="w3-half w3-padding my-responsive-text-align" style="min-height: 100vh;">
+        <div class="w3-half w3-padding my-responsive-text-align w3-card" style="min-height: 100vh;">
             <h3 class="w3-tangerine my-text-orange-pantone w3-center">Globus India</h3>
             <div class="w3-padding my-responsive-text-align">
-            Sample Text: Rudraksh Polychem is one of the fastest and youngest growing company,
-             involved in the manufacturing, supplying, distribution, trading and exporting Masterbatches,
+            Globus India Masterbatches is one of the fastest and youngest growing company,
+             involved in the trading, supplying, distribution and exporting Masterbatches,
               LLDPE Virgin and Pulverised Powder, LDPE Recycled Plastic Granules, HDPE Recycled Granules and
-               PP Granules. Apart from this the company also manufactures Water Tank Lids, Waste Bins, Road
-                Barriers, Pallets, Water Storage Tanks and other Injection Moulding Products as per customers’
-                 requirements. The company is also engaged in trading and supplying other products like Imported
+               PP Granules.  The company is also engaged in trading and supplying other products like Imported
                   Agglomerated Plastic, Masterbatches for Rotomoulding and other Mould Releasing Chemicals and 
-                  Compounds. The company uses the most advanced state-of-the-art manufacturing facilities to 
+                  Compounds. The company's providers Rapid Polymers uses the most advanced state-of-the-art manufacturing facilities to 
                   develop quality products for its customers. Backed by a competent team of qualified professionals
                    who assist us in the sourcing of quality raw materials which in turn give quality finished products. We can also develop products and raw materials as per the customers' requirements.
                 </div></div>
@@ -526,14 +524,14 @@
             <div class="w3-half">
                 <div style="background-image: url(images/app1.jpg);" class="my-image-card ">
                     <button onclick="document.getElementById('id11').style.display='block'" class=" my-full-size my-center w3-transparent my-hover-azure w3-padding ">
-                      <h4 class=" w3-text-white my-full-size my-center my-card-border my-hover-border-azure my-pointer my-transition">Agriculture</h4>
+                      <h4 class=" w3-text-white my-full-size my-center my-card-border my-hover-border-azure my-pointer my-transition">Agriculture & Pharmaceutical</h4>
                     </button>
                 </div>
             </div>
             <div class="w3-half">
               <div style="background-image: url(images/app2.jpg);" class="my-image-card">
                   <button onclick="document.getElementById('id12').style.display='block'" class=" my-full-size my-center w3-transparent my-hover-azure w3-padding ">
-                    <h4 class=" w3-text-white my-full-size my-center my-card-border my-hover-border-azure my-pointer my-transition">Automotive</h4>
+                    <h4 class=" w3-text-white my-full-size my-center my-card-border my-hover-border-azure my-pointer my-transition">Automotive & Textile</h4>
                   </button>
               </div>
             </div>
@@ -560,14 +558,59 @@
         <header class="w3-container my-azure"> 
           <span onclick="document.getElementById('id11').style.display='none'" 
           class="w3-button w3-display-topright"><i class="fas fa-times-circle"></i></span>
-          <h4>Agriculture</h4>
+          <h4>Agriculture & Pharmaceutical</h4>
         </header>
         <div class="w3-container">
-          <p>Some text..</p>
-          <p>Some text..</p>
+          <p><i class="fas fa-hand-pointer"></i> Click on the images</p>
+          <div class="w3-row-padding">
+            <div class="w3-col s3 w3-container">
+            <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Nature');">
+              <img src="images/agri&pharma/1.jpg" alt="Agricultural Masterbatch" style="width:100%">
+            </a>
+            </div>
+            <div class="w3-col s3 w3-container">
+              <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Snow');">
+                <img src="images/agri&pharma/2.jpg" alt="Agricultural" style="width:100%">
+              </a>
+            </div>
+            <div class="w3-col s3 w3-container">
+              <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Mountains');">
+                <img src="images/agri&pharma/3.jpg" alt="Agricultural Masterbatch" style="width:100%">
+              </a>
+            </div>
+            <div class="w3-col s3 w3-container">
+              <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Lights');">
+                <img src="images/agri&pharma/4.jpg" alt="Agricultural Masterbatch" style="width:100%">
+              </a>
+            </div>
+          </div><br>
+          
+          <div id="Nature" class="picture w3-display-container" style="display:none">
+            <img src="images/agri&pharma/1.jpg" alt="Agricultural Masterbatch" style="width:100%">
+            <span onclick="this.parentElement.style.display='none'" 
+            class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
+          </div>
+          
+          <div id="Snow" class="picture w3-display-container" style="display:none">
+            <img src="images/agri&pharma/2.jpg" alt="Agricultural" style="width:100%">
+            <span onclick="this.parentElement.style.display='none'" 
+            class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
+          </div>
+          
+          <div id="Mountains" class="picture w3-display-container" style="display:none">
+            <img src="images/agri&pharma/3.jpg" alt="Agricultural Masterbatch" style="width:100%">
+            <span onclick="this.parentElement.style.display='none'" 
+            class="w3-display-topright w3-button w3-transparent">&times;</span>
+          </div>
+          
+          <div id="Lights" class="picture w3-display-container" style="display:none">
+            <img src="images/agri&pharma/4.jpg" alt="Agricultural Masterbatch" style="width:100%">
+            <span onclick="this.parentElement.style.display='none'" 
+            class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
+          </div>
         </div>
         <footer class="w3-container my-azure">
-          <p>Modal Footer</p>
+          <p>Contact Us for any Query</p>
         </footer>
       </div>
     </div>
@@ -576,14 +619,59 @@
         <header class="w3-container my-azure"> 
           <span onclick="document.getElementById('id12').style.display='none'" 
           class="w3-button w3-display-topright"><i class="fas fa-times-circle"></i></span>
-          <h4>Automotive</h4>
+          <h4>Automotive & Textile</h4>
         </header>
         <div class="w3-container">
-          <p>Some text..</p>
-          <p>Some text..</p>
+          <p><i class="fas fa-hand-pointer"></i> Click on the Images</p>
+          <div class="w3-row-padding">
+            <div class="w3-col s3 w3-container">
+            <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Nature1');">
+              <img src="images/auto&texttile/1.jpg" alt="Automotive Masterbatch" style="width:100%">
+            </a>
+            </div>
+            <div class="w3-col s3 w3-container">
+              <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Snow1');">
+                <img src="images/auto&texttile/2.jpg" alt="Textile Masterbatch" style="width:100%">
+              </a>
+            </div>
+            <div class="w3-col s3 w3-container">
+              <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Mountains1');">
+                <img src="images/auto&texttile/3.jpg" alt="Textile Masterbatch" style="width:100%">
+              </a>
+            </div>
+            <div class="w3-col s3 w3-container">
+              <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Lights1');">
+                <img src="images/auto&texttile/4.jpg" alt="Textile Masterbatch" style="width:100%">
+              </a>
+            </div>
+          </div><br>
+          
+          <div id="Nature1" class="picture w3-display-container" style="display:none">
+            <img src="images/auto&texttile/1.jpg" alt="Automotive Masterbatch" style="width:100%">
+            <span onclick="this.parentElement.style.display='none'" 
+            class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
+          </div>
+          
+          <div id="Snow1" class="picture w3-display-container" style="display:none">
+            <img src="images/auto&texttile/2.jpg" alt="Textile Masterbatch" style="width:100%">
+            <span onclick="this.parentElement.style.display='none'" 
+            class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
+          </div>
+          
+          <div id="Mountains1" class="picture w3-display-container" style="display:none">
+            <img src="images/auto&texttile/3.jpg" alt="TextileMasterbatch" style="width:100%">
+            <span onclick="this.parentElement.style.display='none'" 
+            class="w3-display-topright w3-button w3-transparent">&times;</span>
+          </div>
+          
+          <div id="Lights1" class="picture w3-display-container" style="display:none">
+            <img src="images/auto&texttile/4.jpg" alt="Textile Masterbatch" style="width:100%">
+            <span onclick="this.parentElement.style.display='none'" 
+            class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
+          </div>
         </div>
         <footer class="w3-container my-azure">
-          <p>Modal Footer</p>
+          <p>Contact Us for Query</p>
         </footer>
       </div>
     </div>
@@ -595,11 +683,56 @@
           <h4>Household</h4>
         </header>
         <div class="w3-container">
-          <p>Some text..</p>
-          <p>Some text..</p>
+          <p><i class="fas fa-hand-pointer"></i> Click on the Images</p>
+          <div class="w3-row-padding">
+            <div class="w3-col s3 w3-container">
+            <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Nature2');">
+              <img src="images/household/1.jpg" alt="Household Masterbatch" style="width:100%">
+            </a>
+            </div>
+            <div class="w3-col s3 w3-container">
+              <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Snow2');">
+                <img src="images/household/2.jpg" alt="Household Masterbatch" style="width:100%">
+              </a>
+            </div>
+            <div class="w3-col s3 w3-container">
+              <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Mountains2');">
+                <img src="images/household/3.jpg" alt="Household Masterbatch" style="width:100%">
+              </a>
+            </div>
+            <div class="w3-col s3 w3-container">
+              <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Lights2');">
+                <img src="images/household/4.jpg" alt="Household Masterbatch" style="width:100%">
+              </a>
+            </div>
+          </div><br>
+          
+          <div id="Nature2" class="picture w3-display-container" style="display:none">
+            <img src="images/household/1.jpg" alt="Household Masterbatch" style="width:100%">
+            <span onclick="this.parentElement.style.display='none'" 
+            class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
+          </div>
+          
+          <div id="Snow2" class="picture w3-display-container" style="display:none">
+            <img src="images/household/2.jpg" alt="Household Masterbatch" style="width:100%">
+            <span onclick="this.parentElement.style.display='none'" 
+            class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
+          </div>
+          
+          <div id="Mountains2" class="picture w3-display-container" style="display:none">
+            <img src="images/household/3.jpg" alt="Household Masterbatch" style="width:100%">
+            <span onclick="this.parentElement.style.display='none'" 
+            class="w3-display-topright w3-button w3-transparent">&times;</span>
+          </div>
+          
+          <div id="Lights2" class="picture w3-display-container" style="display:none">
+            <img src="images/household/4.jpg" alt="Household Masterbatch" style="width:100%">
+            <span onclick="this.parentElement.style.display='none'" 
+            class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
+          </div>
         </div>
         <footer class="w3-container my-azure">
-          <p>Modal Footer</p>
+          <p>Contact for any Query</p>
         </footer>
       </div>
     </div>
@@ -611,16 +744,61 @@
           <h4>Packaging</h4>
         </header>
         <div class="w3-container">
-          <p>Some text..</p>
-          <p>Some text..</p>
+          <p><i class="fas fa-hand-pointer"></i> Click on the Images</p>
+          <div class="w3-row-padding">
+            <div class="w3-col s3 w3-container">
+            <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Nature3');">
+              <img src="images/packaging/1.jpg" alt="Packaging Masterbatch" style="width:100%">
+            </a>
+            </div>
+            <div class="w3-col s3 w3-container">
+              <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Snow3');">
+                <img src="images/packaging/2.jpg" alt="Packaging Masterbatch" style="width:100%">
+              </a>
+            </div>
+            <div class="w3-col s3 w3-container">
+              <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Mountains3');">
+                <img src="images/packaging/3.jpg" alt="Packaging Masterbatch" style="width:100%">
+              </a>
+            </div>
+            <div class="w3-col s3 w3-container">
+              <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Lights3');">
+                <img src="images/packaging/4.jpg" alt="Packaging Masterbatch" style="width:100%">
+              </a>
+            </div>
+          </div><br>
+          
+          <div id="Nature3" class="picture w3-display-container" style="display:none">
+            <img src="images/packaging/1.jpg" alt="Packaging Masterbatch" style="width:100%">
+            <span onclick="this.parentElement.style.display='none'" 
+            class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
+          </div>
+          
+          <div id="Snow3" class="picture w3-display-container" style="display:none">
+            <img src="images/packaging/2.jpg" alt="Packaging Masterbatch" style="width:100%">
+            <span onclick="this.parentElement.style.display='none'" 
+            class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
+          </div>
+          
+          <div id="Mountains3" class="picture w3-display-container" style="display:none">
+            <img src="images/packaging/3.jpg" alt="Packaging Masterbatch" style="width:100%">
+            <span onclick="this.parentElement.style.display='none'" 
+            class="w3-display-topright w3-button w3-transparent">&times;</span>
+          </div>
+          
+          <div id="Lights3" class="picture w3-display-container" style="display:none">
+            <img src="images/packaging/4.jpg" alt="Packaging Masterbatch" style="width:100%">
+            <span onclick="this.parentElement.style.display='none'" 
+            class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
+          </div>
         </div>
         <footer class="w3-container my-azure">
-          <p>Modal Footer</p>
+          <p>Contact for any Query</p>
         </footer>
       </div>
     </div>
     <div class="w3-row w3-center" id="customers">
-      <div class="w3-quarter my-center">
+      <div class="w3-quarter my-center w3-card">
         <div class="my-winter-sky my-customer-card">
             <div class="my-center my-full-size">
               <h2 class="w3-tangerine ">Customers</h2>
@@ -635,7 +813,7 @@
         </div>
       </div>
 
-      <div class="w3-quarter my-center w3-hide-small">
+      <div class="w3-quarter my-center w3-card">
         <div class="my-mango my-customer-card">
             <div class="my-center my-full-size">
               <h3 class="w3-tangerine my-text-bold ">Assured <br> Quality</h3>
@@ -657,7 +835,7 @@
         </div>
       </div>
 
-      <div class="w3-quarter my-center w3-hide-small">
+      <div class="w3-quarter my-center w3-card">
         <div class="my-winter-sky my-customer-card">
             <div class="my-center my-full-size">
               <h3 class="w3-tangerine  my-text-bold">Competitive <br> Prices</h3>
@@ -672,7 +850,7 @@
         </div>
       </div>
 
-      <div class="w3-quarter my-center w3-hide-small">
+      <div class="w3-quarter my-center w3-card">
         <div class="my-mango my-customer-card">
             <div class="my-center my-full-size">
               <h3 class="w3-tangerine my-text-bold ">Best <br> R&D <br> Support</h3>
@@ -702,7 +880,8 @@
           </div>
         </div>
         <div class="w3-bar-item" style="margin-top: 5vh;">
-          <img src="images/6.png" alt="make in india" style="height: 60px;">
+          <img src="images/6.png" alt="make in india" style="height: 65px;" class="w3-padding">
+          <img src="images/flag.webp" alt="indian flag" style="height: 65px;" class="w3-padding">
         </div>
         <div class="w3-bar-item" style="margin-top: 5vh;">
           <i class="fab fa-twitter-square w3-padding w3-xxxlarge" ></i>
